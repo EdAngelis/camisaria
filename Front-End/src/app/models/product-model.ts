@@ -1,16 +1,18 @@
 export class ProductModel {
-    constructor (_id ="",name ="",description ="",img ="",valor = 0){
+    constructor (_id ="",name ="",cod=0,description ="",img ="",value = 0){
 
         _id = _id;
+        cod = cod;
         name = name;
         description = description;
         img = img;
-        valor = valor;
+        value = value;
     }
 
     _id: String;
+    cod: Number;
    name: String;
     description: String;
     img: String;
-    valor: Number;
+    value: Number;
 }

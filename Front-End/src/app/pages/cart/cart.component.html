@@ -1,16 +1,24 @@
 <div>
-  <thead>
-    <th>Nome</th>
-    <th>imagem</th>
-    <th>Valor</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{productService.product?.name}}</td>
-      <td>{{productService.product?.img}}</td>
-      <td>{{productService.product?.valor}}</td>
-    </tr>
-    
+    <thead>
+        <th>Cod</th>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>QTD</th>
+        <th>Valor</th>
+        <th>Total</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of productsInCart">
+            <td>{{item.cod}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.qtd}}</td>
+            <td>{{item.value}}</td>
+            <td>{{item.Total}}</td>
+        </tr>
+    </tbody>
+</div>
 
-  </tbody>
+<div>
+    <button routerLink="/home">HOME</button>
 </div>

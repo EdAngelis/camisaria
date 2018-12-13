@@ -3,10 +3,11 @@ const Schema = mongoose.Schema;
 
 const productSchema = new Schema ({
     
-    name:{type:String, required:true,},
+    cod:{type: Number, required:true, unique:true },
+    name:{type:String, required:true, unique:true},
     description:{type:String, required:true},
     img:{type:String, required:true},
-    valor:{type:Number, required:true}
+    value:{type:Number, required:true}
 });
 
     module.exports = mongoose.model('product', productSchema);

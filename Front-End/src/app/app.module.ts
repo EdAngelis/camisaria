@@ -16,6 +16,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TokenInterceptor } from './services/token-intercept';
 import { CartComponent } from './pages/cart/cart.component';
+import { ProductService } from '../app/services/product.service';
 
 
 @NgModule({
@@ -51,7 +52,7 @@ import { CartComponent } from './pages/cart/cart.component';
     
   ],
   entryComponents:[RegisterPopupComponent],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

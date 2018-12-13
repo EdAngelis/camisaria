@@ -20,7 +20,6 @@ export class ProductsScrollComponent implements OnInit {
               private productService: ProductService) { }
 
   ngOnInit() {
-    console.log(this.productService.product);
   }
   scrollDireita(){
        this.intervalo = setInterval(function(){ document.getElementById('scroller').scrollLeft += 1 }  , 5);
@@ -42,14 +41,13 @@ export class ProductsScrollComponent implements OnInit {
 }
 
    addProductInCart(name:string){
-     console.log("parametro:",+name)
+
     if( this.newUserService.user == null){
       const popupConfig = new MatDialogConfig();
       popupConfig.width = "45%";
       popupConfig.height = "60%";
       this.dialog.open(RegisterPopupComponent, popupConfig);
     }else{
-      console.log("Chegou no Componente id :")
       this.productService.addProductInCart(name);
     }
   }
