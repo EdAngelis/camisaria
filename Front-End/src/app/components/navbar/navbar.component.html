@@ -21,10 +21,13 @@
       <li>
         <mat-icon class="cart">shopping_cart</mat-icon>
       </li>
+      <li>
+        <a class="nav-link" (click)="SignIn()">Sign IN</a>
+      </li>
     </ul>
-    <span class="navbar-text">
+    <span class="navbar-text" >
       {{userService.user?.name}}
     </span>
-
+    
   </div>
 </nav>

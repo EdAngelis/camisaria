@@ -17,7 +17,7 @@ export class CartModel {
     description: String;
     img: String;
     qtd: number;
-    value: Number;
+    value: number;
     total:Number;
 }
 

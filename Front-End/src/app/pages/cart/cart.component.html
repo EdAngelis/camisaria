@@ -12,13 +12,15 @@
             <td>{{item.cod}}</td>
             <td>{{item.name}}</td>
             <td>{{item.description}}</td>
+            <button (click)="AddQtd(item.cod)">+</button>
             <td>{{item.qtd}}</td>
+            <button (click)="decreaseQtd(item.cod)">-</button>
             <td>{{item.value}}</td>
-            <td>{{item.Total}}</td>
+            <td>{{item.total}}</td>
         </tr>
     </tbody>
 </div>
 
 <div>
-    <button routerLink="/home">HOME</button>
+    <button routerLink="/home" >HOME</button>
 </div>

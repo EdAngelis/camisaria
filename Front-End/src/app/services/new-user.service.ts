@@ -32,8 +32,7 @@ export class NewUserService {
     await this.http.post(this.URL_LOGIN, login)
     .subscribe ( async res=>{ 
       this.token = res ;
-     await localStorage.setItem("token", this.token.token);
-      console.log(localStorage.getItem('token')); 
+     await localStorage.setItem("token", this.token.token); 
     })    
   
    }
@@ -42,6 +41,7 @@ export class NewUserService {
       this.http.get(this.URL_USERS)
      .subscribe(res=>{
        this.user = res as UserModel;
+       sessionStorage.setItem('user', JSON.stringify(this.user));
      });
    }
 }

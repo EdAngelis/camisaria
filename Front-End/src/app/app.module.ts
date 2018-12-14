@@ -17,6 +17,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TokenInterceptor } from './services/token-intercept';
 import { CartComponent } from './pages/cart/cart.component';
 import { ProductService } from '../app/services/product.service';
+import { NewUserService } from '../app/services/new-user.service';
 
 
 @NgModule({
@@ -27,9 +28,7 @@ import { ProductService } from '../app/services/product.service';
     ProductsScrollComponent,
     RegisterPopupComponent,
     NavbarComponent,
-    CartComponent,
-    
-    
+    CartComponent,  
     
   ],
   imports: [
@@ -52,7 +51,7 @@ import { ProductService } from '../app/services/product.service';
     
   ],
   entryComponents:[RegisterPopupComponent],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }, ProductService],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }, ProductService, NewUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

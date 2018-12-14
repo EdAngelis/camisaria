@@ -20,6 +20,7 @@ export class ProductsScrollComponent implements OnInit {
               private productService: ProductService) { }
 
   ngOnInit() {
+
   }
   scrollDireita(){
        this.intervalo = setInterval(function(){ document.getElementById('scroller').scrollLeft += 1 }  , 5);

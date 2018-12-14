@@ -14,5 +14,5 @@ export class ProductModel {
    name: String;
     description: String;
     img: String;
-    value: Number;
+    value: number;
 }
